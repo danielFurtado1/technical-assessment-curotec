@@ -1,0 +1,51 @@
+.chat-baloon {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-baloon h3 {
+    margin-top: 0;
+  }
+  
+  .chat-baloon-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .chat-baloon-placeholder {
+    color: #777;
+  }
+  
+  .chat-baloon-message {
+    background: #f1f0f0;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+    max-width: 80%;
+  }
+  
+  .chat-baloon-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .chat-baloon-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+  
+  .chat-baloon-button {
+    padding: 0.5rem 1rem;
+  }
+  

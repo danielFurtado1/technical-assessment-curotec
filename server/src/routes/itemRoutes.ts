@@ -3,10 +3,12 @@ import * as itemController from '../controllers/itemController';
 
 const router = Router();
 
+// here are the routes for the server, usually separated by entities, with only changing the verb to make the requests
+
 router
-  .get('/items', itemController.getItems)
-//   .post('/items', itemController.createItem)  fix: bug with the overload parameters
-  .put('/items/:id', itemController.updateItem)
-  .delete('/items/:id', itemController.deleteItem);
+  .get('/', itemController.getItems)
+  .post('/', itemController.createItem)
+  .put('/:id', itemController.updateItem)
+  .delete('/:id', itemController.deleteItem);
 
 export default router;

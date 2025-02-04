@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
+import cors from 'cors';
 import { Server } from 'socket.io';
 import http from 'http';
 
@@ -8,9 +8,9 @@ import itemRoutes from './routes/itemRoutes';
 
 
 const app = express();
-const prisma = new PrismaClient();
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 5000;
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/health', (req: Request, res: Response) => {
@@ -29,6 +29,7 @@ const io = new Server(server, {
 });
 
 
+// this is where we can use a socket connection, for example to join a chat
 io.on('connection', (socket) => {
     console.log('User connected:', socket.id);
 
