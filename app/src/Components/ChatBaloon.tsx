@@ -1,6 +1,7 @@
-// ChatBaloon.tsx
 import React, { useState } from 'react';
 import './ChatBaloon.css';
+
+// This was an idea to implement the socket, but due to the lack of time I could not finish it
 
 const ChatBaloon: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
